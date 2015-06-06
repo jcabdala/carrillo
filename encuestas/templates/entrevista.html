@@ -24,7 +24,7 @@
     background-color: #9999ff;
     }
     .a { text-decoration: none }
-    .a:hover { text-decoration: none } 
+    .a:hover { text-decoration: none }
   </style>
 </head>
 <body>
@@ -33,15 +33,10 @@
   <h2>Entrevista</h2>
   <form role="form">
 
-    <div class="tab-pane active" id="asd">
-    <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ persona.as_p }}
-    <div id="asd"></div>
-    <div class="form-actions">
-    <button type="submit" class="btn btn-primary">Procesar Datos</button>
-    </div>
+    <form action="/tanks/" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+    <br><input type="submit" value="Siguiente" />
     </form>
-  </div>
 </body>
 </html>

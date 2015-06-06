@@ -2,7 +2,7 @@ from django import forms
 from encuestas.models import Persona, CapitalHumano, CapitalFisico, CapitalSocial
 
 
-class Persona(forms.ModelForm):
+class PersonaForm(forms.ModelForm):
     class Meta:
         model = Persona
         fields = '__all__'
