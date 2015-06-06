@@ -1,22 +1,26 @@
-import floppyformsi.__future__ as forms
-from models import Personas, CapitalHumano, CapitalFisico, CapitalSocial
+from django import forms
+from encuestas.models import Persona, CapitalHumano, CapitalFisico, CapitalSocial
 
 
 class Persona(forms.ModelForm):
     class Meta:
-        model = Personas
+        model = Persona
+        fields = '__all__'
 
 
 class CapitalHumano(forms.ModelForm):
     class Meta:
         model = CapitalHumano
+        fields = '__all__'
 
 
 class CapitalFisico(forms.ModelForm):
     class Meta:
         model = CapitalFisico
+        fields = '__all__'
 
 
 class CapitalSocial(forms.ModelForm):
     class Meta:
         model = CapitalSocial
+        fields = '__all__'

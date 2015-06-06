@@ -41,6 +41,14 @@ INSTALLED_APPS = (
     'encuestas'
 )
 
+TEMPLATE_LOADERS = [
+"django.template.loaders.filesystem.Loader",
+"django.template.loaders.app_directories.Loader",
+]
+
+TEMPLATE_DIRS = [
+    os.path.join( "encuestas/templates"),
+]
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
